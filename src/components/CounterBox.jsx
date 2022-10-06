@@ -3,10 +3,11 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
-import { counterActions } from '../store'
+import { counterActions } from '../store/counter';
+
 
 const CounterBox = () => {
-    const counter = useSelector(state => state.counter.counter);
+    const counter = useSelector(state => state.counter.value);
     const dispatch = useDispatch();
 
     function addHandler() {
@@ -26,7 +27,7 @@ const CounterBox = () => {
             backgroundColor="#f1edf8"
             borderRadius="5px"
             padding="1rem"
-            width={{ xs: "40%", md: "45%" }}
+            width={{ xs: "50%", md: "60%" }}
             sx={{
                 justifyContent: "center"
             }}
